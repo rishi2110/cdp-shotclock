@@ -1,0 +1,53 @@
+{
+  "name": "q",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "pre-server-cleanup": "node pre-server-start.js",
+    "dev:server": "npm run pre-server-cleanup && tsx server/index.ts",
+    "build": "tsc -b && vite build",
+    "build:server": "tsc -p server/tsconfig.json",
+    "start:server": "node server/dist/index.cjs",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "reset-server": "node reset-server.js",
+    "kill-server": "node kill-server.js",
+    "clean-start": "node clean-start.js",
+    "start-all": "node start-all.cjs"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.15",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "tsx": "^4.20.3",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4"
+  }
+}

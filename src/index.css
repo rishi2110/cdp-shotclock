@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-green-900 text-white font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .card {
+    @apply bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20;
+  }
+  
+  .timer-display {
+    @apply text-6xl font-bold text-center font-mono;
+  }
+  
+  .player-active {
+    @apply bg-green-600 border-2 border-yellow-400;
+  }
+  
+  .player-inactive {
+    @apply bg-white/10 border-2 border-transparent;
+  }
+}
